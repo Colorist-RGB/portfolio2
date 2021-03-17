@@ -1,8 +1,8 @@
 $(".slide_group").slick({
     autoplay: true, // 자동재생
-    autoplaySpeed: 3000, // 간격시간
+    autoplaySpeed: 5000, // 간격시간
     dots: true, // 동그라미버튼
-    speed: 600, // 바뀌는시간(생략가능)
+    speed: 500, // 바뀌는시간(생략가능)
     slidesToShow: 1, // 보여질슬라이드수(생략가능)
     slidesToScroll: 1, // 이동슬라이드수(생략가능)
     pauseOnHover: true, // 마우스오버시 멈춤여부(생략가능)
@@ -17,9 +17,9 @@ $(".slide_group").slick({
 })
 $(".slide_group2").slick({
     autoplay: true, // 자동재생
-    autoplaySpeed: 3000, // 간격시간
+    autoplaySpeed: 5000, // 간격시간
     dots: true, // 동그라미버튼
-    speed: 600, // 바뀌는시간(생략가능)
+    speed: 500, // 바뀌는시간(생략가능)
     slidesToShow: 1, // 보여질슬라이드수(생략가능)
     slidesToScroll: 1, // 이동슬라이드수(생략가능)
     pauseOnHover: true, // 마우스오버시 멈춤여부(생략가능)
@@ -33,35 +33,39 @@ $(".slide_group2").slick({
     nextArrow: '<button class="next"><i class="fas fa-angle-right"></i></button>',
 })
 
+// 스크롤 특정 구간 도착 시 이벤트 발생 + 헤더 픽스
+var wh = $(window).height()
+var article2Near = $('.article2').offset().top - (wh-300)
+var article3Near = $('.article3').offset().top - (wh-300)
+var article5Near = $('.article3').offset().top + 300
+
 // 슬라이드 멈춤 재생 버튼
-var $ibutton;
-$('.article1 .plpa').on('click', function(){
-    $ibutton = $(this).find('i')
-    if ($ibutton.hasClass('fa-pause')) {
-        $('.slide_group').slick('slickPause')
-        $ibutton.removeClass('fa-pause').addClass('fa-play')
-    } else {
-        $('.slide_group').slick('slickPlay')
-        $ibutton.removeClass('fa-play').addClass('fa-pause')
-    }
-})
+// var $ibutton;
+// $('.article1 .plpa').on('click', function(){
+//     $ibutton = $(this).find('i')
+//     if ($ibutton.hasClass('fa-pause')) {
+//         $('.slide_group').slick('slickPause')
+//         $ibutton.removeClass('fa-pause').addClass('fa-play')
+//     } else {
+//         $('.slide_group').slick('slickPlay')
+//         $ibutton.removeClass('fa-play').addClass('fa-pause')
+//     }
+// })
 // 슬라이드 멈춤 재생 버튼 2
-var $ibutton2;
-$('.article4 .plpa').on('click', function(){
-    $ibutton2 = $(this).find('i')
-    if ($ibutton2.hasClass('fa-pause')) {
-        $('.slide_group2').slick('slickPause')
-        $ibutton2.removeClass('fa-pause').addClass('fa-play')
-    } else {
-        $('.slide_group2').slick('slickPlay')
-        $ibutton2.removeClass('fa-play').addClass('fa-pause')
-    }
-})
+// var $ibutton2;
+// $('.article4 .plpa').on('click', function(){
+//     $ibutton2 = $(this).find('i')
+//     if ($ibutton2.hasClass('fa-pause')) {
+//         $('.slide_group2').slick('slickPause')
+//         $ibutton2.removeClass('fa-pause').addClass('fa-play')
+//     } else {
+//         $('.slide_group2').slick('slickPlay')
+//         $ibutton2.removeClass('fa-play').addClass('fa-pause')
+//     }
+// })
 
 // prev, next
 var ww = $(window).width()
-console.log(ww)
-
 var $prev = $('.slide_group .prev')
 var $prevAni = $('#section .article1 .prevani')
 var $next = $('.slide_group .next')
@@ -91,37 +95,24 @@ $next.hover(
     }
 )
 
-// 스크롤 시 헤더 픽스
-$(window).on('scroll', function(){
-    var sct = $(this).scrollTop()
-    if (sct>=20 && !$('#header').hasClass('on')) {
-        $('#header').addClass('on')
-    } else if (sct<20 && $('#header').hasClass('on')) {
-        $('#header').removeClass('on')
-    }
-})
-
-// 탑버튼 부드럽게 스크롤
-$('.topbt').on('click', function(e){
-    e.preventDefault()
-    var sct = $(window).scrollTop()
-    if (sct===0) {
-         return false
-    } else {
-        $('html').animate({
-            scrollTop:0
-        }, 500)
-    }    
-})
-
-// 열기, 닫기 버튼
-$('#header .open').on('click', function(){
-    $(this).removeClass('on')
-    $(this).next().addClass('on')
-    $(this).next().next().addClass('on')
-})
-$('#header .close').on('click', function(){
-    $(this).removeClass('on')
-    $(this).prev().removeClass('on')
-    $(this).prev().prev().addClass('on')
-})
+// 넓이 300px 이하일때 article4 이벤트
+var $art4s1h3 = $('#section .article4 .slide1 h3');
+var $art4s1p = $('#section .article4 .slide1 p');
+var $art4s1a = $('#section .article4 .slide1 a');
+var $art4s2h3 = $('#section .article4 .slide2 h3');
+var $art4s2p = $('#section .article4 .slide2 p');
+var $art4s2a = $('#section .article4 .slide2 a');
+if (ww<=300) {
+    $art4s1h3.text('창업 안내')
+    $art4s1p.css({
+        display: 'none'
+    })
+    $art4s1a.text('상세내용 바로가기')
+}
+if (ww<=300) {
+    $art4s2h3.text('이벤트 안내')
+    $art4s2p.css({
+        display: 'none'
+    })
+    $art4s2a.text('이벤트 바로가기')
+}
