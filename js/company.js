@@ -17,7 +17,7 @@
 var imgList = ''
 $.ajax({
     type : 'GET',
-    url : 'https://colorist-rgb.github.io/portfolio2/data/data1.json',
+    url : './data/data1.json',
     timeOut : 3000,
     beforeSend : function(xhr){
         if (xhr.overrideMimeType) {
