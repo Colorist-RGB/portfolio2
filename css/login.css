@@ -1,10 +1,5 @@
 @charset "UTF-8";
 
-.row {
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 0 0px;
-}
 legend {
     display: none;
 }
@@ -12,8 +7,8 @@ button {
     outline: none;
 }
 .loginBox {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 100px;
+    padding-bottom: 500px;
     text-align: center;
 }
 .loginBox .left,
@@ -100,6 +95,8 @@ button {
     cursor: pointer;
 }
 .loginBox .depth2 .btn {
-    text-align: center;
     padding-bottom: 20px;
+}
+.loginBox .depth2 .btn a {
+    text-align: center;
 }

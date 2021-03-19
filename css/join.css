@@ -128,21 +128,27 @@ legend {
 }
 .joinBox #idbox,
 .joinBox #pwbox,
-.joinBox #irum,
+.joinBox #birth {
+    width: 25%;
+}
+.joinBox #irum {
+    width: 15%;
+}
 .joinBox #emailid,
-.joinBox #emailidomain {
-    width: 200px;
+.joinBox #emaildomain {
+    width: 30%;
 }
 .joinBox #zipcode,
 .joinBox #hp1,
-.joinBox #hp2,
-.joinBox #birth {
-    width: 100px;
+.joinBox #hp2 {
+    width: 12%;
 }
 .joinBox #addr1,
-.joinBox #addr2,
-.joinBox #addr3 {
+.joinBox #addr2 {
     width: 35%;
+}
+.joinBox #addr3 {
+    width: 50%;
 }
 .joinBox #zipcode + button {
     height: 30px;

@@ -1,9 +1,24 @@
+@media screen and (max-width:1133px) {
+
+    /* 로그인 */
+    .loginBox .left {
+        padding-right: 25px;
+    }
+
+    .loginBox .right {
+        padding-left: 25px;
+    }
+
+    /* 마지막 부분 */
+}
+
 @media screen and (max-width:1024px) {
 
     /*헤더 .on*/
     #header.on .outer {
         margin-top: -31px;
     }
+
     #header.on {
         position: fixed;
         top: 0;
@@ -15,6 +30,7 @@
     #header .open.on {
         display: block;
     }
+
     #header .close.on {
         display: block;
     }
@@ -24,6 +40,7 @@
         opacity: 0;
         right: -100%;
     }
+
     /* #nav.on {
         display:block;
         animation: nav 1s both;
@@ -42,9 +59,11 @@
     #nav>ul>li>a {
         padding: 40px 8px;
     }
+
     #nav .depth1>li:nth-child(5) {
         margin-right: 40px;
     }
+
     #nav .depth1>li:nth-child(6) {
         display: none;
     }
@@ -54,10 +73,12 @@
         text-align: center;
         padding: 0px 0px;
     }
-    .article2 .depth3 > p {
+
+    .article2 .depth3>p {
         display: none;
     }
-    .article2 .depth3 > a {
+
+    .article2 .depth3>a {
         margin-top: 10px;
     }
 
@@ -65,7 +86,8 @@
     .article3 .depth3 {
         padding: 0px 0px;
     }
-    .article3 .depth3 > p {
+
+    .article3 .depth3>p {
         width: 33.3333%;
         white-space: nowrap;
         overflow: hidden;
@@ -73,11 +95,12 @@
     }
 
     /*섹션 아티클5*/
-    .article5 > ul > li p {
+    .article5>ul>li p {
         word-break: break-all;
         padding: 20px 10px 30px;
     }
-    .article5 > ul > li span {
+
+    .article5>ul>li span {
         display: block;
         padding-left: 8px;
     }
@@ -88,6 +111,7 @@
         bottom: 3%;
         right: 3%;
     }
+
     #footer .topbt a {
         display: inline-block;
         width: 25px;
@@ -98,10 +122,58 @@
         font-size: 16px;
         transition: all 0.1s;
     }
+
+    /* 로그인 */
+
+    .loginBox .left {
+        padding-right: 0px;
+    }
+
+    .loginBox .right {
+        padding-left: 0px;
+    }
+
+    .loginBox .right:before {
+        display: none;
+    }
+
+    .loginBox .left,
+    .loginBox .right {
+        text-align: center;
+    }
+
+    .loginBox>div {
+        display: block;
+    }
+
+    .loginBox input,
+    .loginBox .depth2 a,
+    .loginBox .depth1 button,
+    .loginBox .depth2 button {
+        width: 50%;
+    }
+
+    .loginBox>div:nth-child(1) {
+        padding-bottom: 75px;
+    }
+
+    .loginBox .disNone {
+        display: none;
+    }
+
+    .loginBox h2 {
+        padding: 0;
+    }
+
+    .loginBox h2:before {
+        display: none;
+    }
+
     /*마지막 부분*/
 }
 
 @media screen and (max-width:768px) {
+
     /*섹션 아티클1 슬라이드 그룹 설정*/
     .slide_group .slick-arrow {
         opacity: 0;
@@ -111,13 +183,14 @@
     #header .open.on {
         display: block;
     }
+
     #header .close.on {
         display: block;
     }
 
     /*헤더 네비게이션 depth1*/
     #nav {
-        display:block;
+        display: block;
         position: fixed;
         top: 127px;
         bottom: 0;
@@ -128,34 +201,40 @@
         right: -150px;
         opacity: 0;
     }
+
     #header.on #nav {
         top: 96px;
-    }    
+    }
+
     #nav .depth1>li:nth-child(5) {
         margin-right: 0px;
     }
+
     #nav>ul>li {
         float: none;
         display: block;
     }
+
     #nav>ul>li>a {
         padding: 30px 20px;
     }
+
     #nav.on {
-        display:block;
+        display: block;
         animation: none 1s both;
     }
+
     @keyframes nav {
         from {
-          opacity: 0;
-          right: -100%
+            opacity: 0;
+            right: -100%
         }
-      
+
         to {
-          opacity: 1;
-          right: 15px
+            opacity: 1;
+            right: 15px
         }
-      }
+    }
 
     /*헤더 네비게이션 depth2*/
     #nav .depth2 {
@@ -168,32 +247,111 @@
         display: block;
     }
 
+    /* 회원가입 */
+    .joinBox col:nth-child(1) {
+        width: 30%;
+    }
+
+    .joinBox col:nth-child(2) {
+        width: 70%;
+    }
+
+    .joinBox fieldset {
+        font-size: 14px;
+    }
+
+    .joinBox #idbox,
+    .joinBox #pwbox,
+    .joinBox #irum,
+    .joinBox #hp1,
+    .joinBox #hp2,
+    .joinBox #addr1,
+    .joinBox #addr2,
+    .joinBox #addr3,
+    .joinBox #zipcode,
+    .joinBox #emailid,
+    .joinBox #emaildomain {
+        overflow: hidden;
+    }
+
+    .joinBox #idbox,
+    .joinBox #pwbox,
+    .joinBox #birth {
+        width: 30%;
+    }
+
+    .joinBox #irum,
+    .joinBox #zipcode,
+    .joinBox #hp1,
+    .joinBox #hp2 {
+        width: 20%;
+    }
+
+    .joinBox #addr1,
+    .joinBox #addr2 {
+        width: 50%;
+    }
+
+    .joinBox fieldset .addr1,
+    .joinBox fieldset .addr2 {
+        display: block;
+    }
+
+    /* .joinBox fieldset .checkBox1,
+    .joinBox fieldset .checkBox2 {
+        display: block;
+    } */
+    .joinBox fieldset .checkBox1 {
+        padding-bottom: 8px;
+    }
+
+    .joinBox fieldset .memo1,
+    .joinBox fieldset .memo2 {
+        display: block;
+    }
+
+    .joinBox .zipbtn {
+        width: 70px;
+        border-radius: 5px;
+        border: 1px solid #999;
+        margin-left: 5px;
+    }
+
+    .joinBox .zipbtn i {
+        display: none;
+    }
+
     /*마지막 부분*/
 }
 
-@media screen and (max-width:501px) {
+@media screen and (max-width:500px) {
 
     /*섹션 아티클2*/
     .article2 .textbox span {
         display: block;
         padding-top: 5px;
     }
+
     .article2 .depth3 {
         float: none;
         width: 100%;
         padding-bottom: 30px;
         opacity: 1;
-        
+
     }
+
     .article2 .depth3:nth-child(3) {
-        padding-bottom: 0px;        
+        padding-bottom: 0px;
     }
+
     .article2.on .depth3:nth-child(1) {
         animation: ar2no 0.5s both 0.6s;
     }
+
     .article2.on .depth3:nth-child(2) {
         animation: ar2no 0.5s both 0.8s;
     }
+
     .article2.on .depth3:nth-child(3) {
         animation: ar2no 0.5s both 1.0s;
     }
@@ -205,44 +363,147 @@
         padding-bottom: 30px;
         opacity: 1;
     }
+
     .article3.on .depth3 {
         animation: ar3no 0.5s both 0.6s;
     }
+
     .article3 .depth3:nth-child(3) {
-        padding-bottom: 0px;        
+        padding-bottom: 0px;
     }
 
     /*섹션 아티클5*/
-    .article5 > ul > li {
+    .article5>ul>li {
         float: none;
         width: 100%;
     }
-    .article5 > ul > li h3 {
+
+    .article5>ul>li h3 {
         font-size: 34px;
         padding-top: 55px;
     }
-    .article5 > ul > li p {
+
+    .article5>ul>li p {
         font-size: 18px;
         word-break: break-all;
         padding: 20px 0px 30px;
     }
-    .article5 > ul > li i {
+
+    .article5>ul>li i {
         font-size: 30px;
     }
+
     .article5 .depth1 {
         opacity: 1;
-    }    
+    }
+
     .article5.on .depth1:nth-child(1) {
         animation: ar5no 0.5s both 0.4s;
     }
+
     .article5.on .depth1:nth-child(2) {
         animation: ar5no 0.5s both 0.6s;
     }
+
     .article5.on .depth1:nth-child(3) {
         animation: ar5no 0.5s both 0.8s;
     }
+
     .article5.on .depth1:nth-child(4) {
         animation: ar5no 0.5s both 1.0s;
+    }
+
+    /* 로그인 */
+    .loginBox {
+        padding-top: 75px;
+        padding-bottom: 100px;
+    }
+
+    .loginBox input,
+    .loginBox .depth2 a,
+    .loginBox .depth1 button,
+    .loginBox .depth2 button {
+        width: 80%;
+    }
+
+    /* 회원가입 */
+    .joinBox col:nth-child(1) {
+        width: 20%;
+    }
+
+    .joinBox col:nth-child(2) {
+        width: 80%;
+    }
+
+    .joinBox #idbox,
+    .joinBox #pwbox,
+    .joinBox #birth {
+        width: 40%;
+    }
+
+    .joinBox #irum,
+    .joinBox #zipcode,
+    .joinBox #hp1,
+    .joinBox #hp2 {
+        width: 30%;
+    }
+
+    .joinBox #addr1,
+    .joinBox #addr2 {
+        width: 60%;
+    }
+
+    .joinBox #addr3 {
+        width: 80%;
+    }
+
+    .joinBox fieldset .addr1,
+    .joinBox fieldset .addr2 {
+        display: block;
+    }
+
+    .joinBox fieldset .checkBox1 {
+        padding-bottom: 8px;
+    }
+
+    .joinBox fieldset .memo1,
+    .joinBox fieldset .memo2 {
+        display: block;
+    }
+
+    .joinBox .zipbtn {
+        width: 70px;
+        border-radius: 5px;
+        border: 1px solid #999;
+        margin-left: 5px;
+    }
+
+    .joinBox .zipbtn i {
+        display: none;
+    }
+
+    /*마지막 부분*/
+}
+
+@media screen and (max-width:450px) {
+
+    /*헤더 아웃터*/
+    .outer ul li i {
+        display: none;
+    }
+
+    .outer ul li a {
+        padding: 7px 7px 7px 13px;
+    }
+
+    /* 회원가입 */
+    .joinBox fieldset {
+        font-size: 12px;
+    }
+
+    .joinBox fieldset .checkBox1,
+    .joinBox fieldset .checkBox2 {
+        display: block;
     }
 
     /*마지막 부분*/
@@ -251,55 +512,97 @@
 @media screen and (max-width:301px) {
 
     /*헤더 아웃터*/
-    .outer ul li i {
-        display: none;
-    }
     .outer ul li a {
-        display: inline-block;
         padding: 7px 5px 7px 10px;
-        color: #999;
-        transition: all 0.3s;
     }
 
-    /*헤더 네비게이션 depth1*/    
+    /*헤더 네비게이션 depth1*/
     #nav {
         width: 140px;
     }
+
     #nav>ul>li>a {
         padding: 20px 20px;
     }
-    
+
 
     /*섹션 아티클1 슬라이드*/
     .article1 .slide_text p {
         font-size: 16px;
     }
+
     .article1 .slide_text h2 {
         font-size: 28px;
     }
+
     .article1 .slide_text a {
         font-size: 14px;
     }
+
     .article1 .slide_text span {
         display: block;
     }
+
     .article1 .slide1 {
         height: 400px;
     }
+
     .article1 .slide2 {
         height: 400px;
     }
+
     .article1 .slide3 {
         height: 400px;
     }
 
     /*섹션 아티클5*/
-    .article5 > ul > li p {
+    .article5>ul>li p {
         font-size: 13px;
     }
-    .article5 > ul > li p > span {
+
+    .article5>ul>li p>span {
         padding-right: 8px;
     }
+
+    /* 회원가입 */
+    .joinBox {
+        padding-top: 30px;
+        padding-bottom: 30px
+    }
+
+    .joinBox h3 {
+        font-size: 18px;
+        padding: 0 0 25px 0;
+    }
+    .joinBox col:nth-child(1) {
+        width: 30%;
+    }
+
+    .joinBox col:nth-child(2) {
+        width: 70%;
+    }
+
+    .joinBox fieldset {
+        font-size: 12px;
+    }
+
+    .joinBox #idbox,
+    .joinBox #pwbox,
+    .joinBox #birth,
+    .joinBox #irum {
+        width: 60%;
+    }
+
+    .joinBox #zipcode,
+    .joinBox #hp1,
+    .joinBox #hp2 {
+        width: 30%;
+    }
+
+    .joinBox #emailid,
+    .joinBox #emaildomain {
+        width: 80%;
+}
 
     /*마지막 부분*/
 }
