@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+caption {
+    display: none;
+}
+.noticeBox {
+    padding-top: 80px;
+    padding-bottom: 80px
+}
+.noticeBox h2 {
+    font-size: 30px;
+    padding: 40px 0;
+}
+.noticeBox .readyFor {
+    width: 300px;
+    height: 300px;
+    border: 8px solid #ddd;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px #ddd;;
+}
+.noticeBox .textBox {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: translateY(-50%);
+}
+.noticeBox .textBox i {
+    font-size: 54px;
+    padding-bottom: 40px;
+    color: #327BBF;
+}
+.noticeBox .textBox .text {
+    font-size: 24px;
+    font-weight: bold;
+}

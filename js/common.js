@@ -176,7 +176,7 @@ $('#modal .depth2 > li').hover(
 )
 
 // 모달창 클릭 이벤트 + on이벤트를 스크롤로 대체
-$('#modal .depth2 > li').on('click', function(e){
+$('#modal .depth2 > li.prevent').on('click', function(e){
     e.preventDefault()
     // $(this).toggleClass('on').siblings().removeClass('on')
     $(this).find('.depth3').stop().slideToggle(300)
