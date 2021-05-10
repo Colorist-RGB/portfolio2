@@ -332,6 +332,10 @@
 @media screen and (max-width:500px) {
 
     /*섹션 아티클2*/
+    .article1 .slide_text h2 {
+        font-size: 38px;
+    }
+
     .article2 .textbox span {
         display: block;
         padding-top: 5px;
@@ -517,6 +521,18 @@
     .joinBox fieldset .checkBox1,
     .joinBox fieldset .checkBox2 {
         display: block;
+    }
+
+    /*섹션 아티클4 슬라이드*/
+    .article4 .slide_group2 .slide_text {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .article4 .slide_group2 .slide_text h3,
+    .article4 .slide_group2 .slide_text p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     /*마지막 부분*/

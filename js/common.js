@@ -147,7 +147,7 @@ $('#nav .depth1 > li').hover(
 )
 
 // 네비게이션 클릭 이벤트 + on이벤트를 스크롤로 대체
-$('#nav .depth1 > li').on('click', function(e){
+$('#nav .depth1 > li.prevent').on('click', function(e){
     if ($('html').hasClass('tablet') || $('html').hasClass('mobile')) {
         e.preventDefault()
         // $(this).toggleClass('on').siblings().removeClass('on')
